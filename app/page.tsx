@@ -2,6 +2,9 @@ import { Montserrat } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+
 const montserrat = Montserrat({
   subsets: ["latin"],
 });
@@ -21,7 +24,13 @@ export default function Home() {
             real-time with our app and we offer cost effective delivery rates.
           </p>
 
-          <div className="mt-6 flex flex-col gap-4 md:flex-row">
+          <div className="mt-6 max-w-xl space-y-4">
+            <Input placeholder="Enter your email" />
+
+            <Button>Join the Waitlist</Button>
+          </div>
+
+          {/* <div className="mt-6 flex flex-col gap-4 md:flex-row">
             <Link
               className={`${montserrat.className} flex w-full items-center justify-center gap-6 rounded-xl border border-primary-grey bg-white py-3.5 font-semibold uppercase leading-[1.4] tracking-[-0.02em]`}
               href="/"
@@ -49,7 +58,7 @@ export default function Home() {
               />
               Get on Android
             </Link>
-          </div>
+          </div> */}
 
           <div className="relative mt-20 h-72 sm:h-[38rem]">
             <div className="absolute left-0 top-0 h-72 w-7/12 overflow-hidden sm:h-[38rem] md:w-3/5 lg:w-[44%]">
