@@ -16,7 +16,13 @@ const config = {
         "2xl": "1400px",
       },
     },
+    dropShadow: {
+      test: "0 0 150px 555px rgba(0, 0, 0, 1)",
+    },
     extend: {
+      backgroundImage: {
+        pattern: "url('/bg.svg')",
+      },
       colors: {
         primary: {
           black: "#181F18",

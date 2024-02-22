@@ -2,8 +2,6 @@ import { Montserrat } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 
-import Navbar from "@/components/navbar";
-
 const montserrat = Montserrat({
   subsets: ["latin"],
 });
@@ -11,11 +9,9 @@ const montserrat = Montserrat({
 export default function Home() {
   return (
     <>
-      <Navbar />
-
       <main className="px-5 md:px-8">
         <div className="mx-auto mt-20 max-w-5xl">
-          <h1 className="max-w-sm text-5xl font-semibold leading-[1.2] tracking-[-0.04em] text-primary-black lg:max-w-xl lg:text-[4rem]">
+          <h1 className="max-w-sm text-5xl font-semibold leading-[1.2] text-primary-black md:max-w-xl md:text-[4rem]">
             The future of delivery logistics
           </h1>
 
@@ -56,7 +52,7 @@ export default function Home() {
           </div>
 
           <div className="relative mt-20 h-72 sm:h-[38rem]">
-            <div className="absolute left-0 top-0 h-72 w-3/5 overflow-hidden sm:h-[38rem] md:w-[43%]">
+            <div className="absolute left-0 top-0 h-72 w-7/12 overflow-hidden sm:h-[38rem] md:w-3/5 lg:w-[44%]">
               <Image
                 src="/3.png"
                 alt="hero image"
@@ -65,7 +61,7 @@ export default function Home() {
               />
             </div>
 
-            <div className="absolute left-0 right-0 top-0 mx-auto h-72 w-3/5 overflow-hidden sm:h-[38rem] md:w-[43%]">
+            <div className="absolute left-0 right-0 top-0 mx-auto h-72 w-7/12 overflow-hidden sm:h-[38rem] md:w-3/5 lg:w-[44%]">
               <Image
                 src="/1.png"
                 alt="hero image"
@@ -74,7 +70,7 @@ export default function Home() {
               />
             </div>
 
-            <div className="absolute right-0 top-0 h-72 w-3/5 overflow-hidden sm:h-[38rem] md:w-[43%]">
+            <div className="absolute right-0 top-0 h-72 w-7/12 overflow-hidden sm:h-[38rem] md:w-3/5 lg:w-[44%]">
               <Image
                 src="/2.png"
                 alt="hero image"
@@ -85,6 +81,8 @@ export default function Home() {
           </div>
         </div>
       </main>
+
+      <div className="absolute left-0 top-0 -z-10 hidden h-full w-full bg-pattern bg-cover bg-top bg-no-repeat opacity-40 md:block md:bg-auto" />
 
       <footer className="bg-primary-green/30 px-5 py-6">
         <div className="mx-auto flex w-full max-w-5xl items-center justify-between">

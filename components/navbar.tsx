@@ -4,21 +4,23 @@ import { AlignRight, Mail, MessageCircleMore, Phone } from "lucide-react";
 import { Montserrat } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
-import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
 });
 
 export default function Navbar() {
+  const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
+
   return (
     <nav className="flex items-center justify-between px-5 py-6 md:px-8">
       <Link href="/">
@@ -30,13 +32,13 @@ export default function Navbar() {
         href="/contact"
       ></Link>
 
-      <Sheet>
+      <Sheet open={open} onOpenChange={setOpen}>
         <SheetTrigger>
-          <div className="hidden h-[3.75rem] w-[3.75rem] items-center justify-center rounded-full bg-primary-green/30 md:hidden lg:flex">
+          <div className="hidden h-[3.75rem] w-[3.75rem] items-center justify-center rounded-full bg-primary-green/30 lg:flex">
             <AlignRight className="h-6 w-6" />
           </div>
 
-          <div className="font-medium leading-[1.4] tracking-[-0.02em] md:hidden">
+          <div className="font-medium leading-[1.4] tracking-[-0.02em] lg:hidden">
             Contact Us
           </div>
         </SheetTrigger>
@@ -51,7 +53,7 @@ export default function Navbar() {
 
                 <Link
                   className="text-xl font-semibold leading-[1.2] tracking-[-0.04em] hover:text-[#44B242] hover:underline md:text-4xl"
-                  href="/email"
+                  href="/contact"
                 >
                   Email us
                 </Link>
@@ -64,7 +66,7 @@ export default function Navbar() {
 
                 <Link
                   className="text-xl font-semibold leading-[1.2] tracking-[-0.04em] hover:text-[#44B242] hover:underline md:text-4xl"
-                  href="/email"
+                  href="/"
                 >
                   Chat with us
                 </Link>
@@ -77,7 +79,7 @@ export default function Navbar() {
 
                 <Link
                   className="text-xl font-semibold leading-[1.2] tracking-[-0.04em] hover:text-[#44B242] hover:underline md:text-4xl"
-                  href="/email"
+                  href="/"
                 >
                   Call us
                 </Link>

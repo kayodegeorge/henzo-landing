@@ -3,8 +3,7 @@ import { Inter } from "next/font/google";
 
 import "./globals.css";
 
-import Image from "next/image";
-import Link from "next/link";
+import Navbar from "@/components/navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,7 +20,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="bg-auto bg-top bg-no-repeat md:bg-bg">{children}</div>
+        <div className="relative z-10">
+          <Navbar />
+
+          {children}
+        </div>
       </body>
     </html>
   );
