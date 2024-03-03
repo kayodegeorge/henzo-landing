@@ -1,3 +1,4 @@
+import { Facebook, Twitter } from "lucide-react";
 import { Montserrat } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
@@ -93,8 +94,11 @@ export default function Home() {
 
       <div className="absolute left-0 top-0 -z-10 hidden h-full w-full bg-pattern bg-cover bg-top bg-no-repeat opacity-40 md:block md:bg-auto" />
 
-      <footer className="bg-primary-green/30 px-5 py-6">
-        <div className="mx-auto flex w-full max-w-5xl items-center justify-between">
+      <footer className="bg-primary-green/30 px-[200px] py-10">
+        <Link href="/">
+          <Image src="/logo.svg" alt="Henzo Logo" width={247} height={110} />
+        </Link>
+        <div className="mx-auto mt-3 flex w-full max-w-5xl gap-8">
           <Link
             className="font-semibold leading-[1.4] tracking-[-0.02em]"
             href="/terms-of-use"
@@ -107,6 +111,29 @@ export default function Home() {
             href="/privacy-policy"
           >
             Privacy Policy
+          </Link>
+          <Link
+            className="font-semibold leading-[1.4] tracking-[-0.02em]"
+            href="/privacy-policy"
+          >
+            info@henzologistics.com
+          </Link>
+        </div>
+        <div className="mt-5 flex w-full gap-8">
+          <Link href="/">
+            <Facebook size={15} />
+          </Link>
+          <Link href="/">
+            <Twitter size={15} />
+          </Link>
+          <Link href="/">
+            <Image src="/logo.svg" alt="Henzo Logo" width={24} height={24} />
+          </Link>
+          <Link href="/">
+            <Image src="/logo.svg" alt="Henzo Logo" width={24} height={24} />
+          </Link>
+          <Link href="/">
+            <Image src="/logo.svg" alt="Henzo Logo" width={24} height={24} />
           </Link>
         </div>
       </footer>
