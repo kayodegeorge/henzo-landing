@@ -2,6 +2,8 @@ import { Montserrat } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 
+import Footer from "@/components/footer";
+
 const montserrat = Montserrat({
   subsets: ["latin"],
 });
@@ -202,7 +204,9 @@ export default function TermsOfUse() {
         </div>
       </main>
 
-      <footer className="pb-10 pt-[7.5rem]">
+      <Footer />
+
+      {/* <footer className="pb-10 pt-[7.5rem]">
         <div className="flex justify-center">
           <Image src="/logo.png" alt="Henzo Logo" width={247} height={114} />
         </div>
@@ -236,7 +240,7 @@ export default function TermsOfUse() {
             Get on Android
           </Link>
         </div>
-      </footer>
+      </footer> */}
     </>
   );
 }

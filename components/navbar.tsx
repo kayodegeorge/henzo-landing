@@ -38,7 +38,7 @@ export default function Navbar() {
             <AlignRight className="h-6 w-6" />
           </div>
 
-          <div className="font-medium leading-[1.4] tracking-[-0.02em] lg:hidden">
+          <div className="text-lg font-semibold leading-[1.4] tracking-[-0.02em] text-[#44B242] underline lg:hidden">
             Contact Us
           </div>
         </SheetTrigger>
@@ -53,7 +53,7 @@ export default function Navbar() {
 
                 <Link
                   className="text-xl font-semibold leading-[1.2] tracking-[-0.04em] hover:text-[#44B242] hover:underline md:text-4xl"
-                  href="/contact"
+                  href="mailto:info@henzologistics.com"
                 >
                   Email us
                 </Link>
