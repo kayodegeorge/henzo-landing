@@ -32,7 +32,7 @@ export default function Navbar() {
         href="/contact"
       ></Link>
 
-      {/* <Sheet open={open} onOpenChange={setOpen}>
+      <Sheet open={open} onOpenChange={setOpen}>
         <SheetTrigger>
           <div className="hidden h-[3.75rem] w-[3.75rem] items-center justify-center rounded-full bg-primary-green/30 lg:flex">
             <AlignRight className="h-6 w-6" />
@@ -117,13 +117,13 @@ export default function Navbar() {
             </div>
           </div>
         </SheetContent>
-      </Sheet> */}
-      <Link
-        href="https://facebook.com"
+      </Sheet>
+      {/* <Link
+        href="https://info@henzologistics.com"
         className="text-primary-green underline"
       >
         Contact us
-      </Link>
+      </Link> */}
     </nav>
   );
 }
