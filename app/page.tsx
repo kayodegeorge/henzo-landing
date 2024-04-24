@@ -1,7 +1,12 @@
+import { Montserrat } from "next/font/google";
 import Image from "next/image";
+import Link from "next/link";
 
 import Footer from "@/components/footer";
-import WaitlistForm from "@/components/waitlist-form";
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+});
 
 export default function Home() {
   return (
@@ -20,8 +25,34 @@ export default function Home() {
               rates.
             </p>
 
-            <div className="mt-6 max-w-xl">
-              <WaitlistForm />
+            <div className="mt-6 gap-4 lg:flex">
+              <Link
+                className={`${montserrat.className} flex w-full items-center justify-center gap-6 rounded-xl border border-primary-grey bg-white py-3.5 font-semibold uppercase leading-[1.4] tracking-[-0.02em]`}
+                href="/"
+                target="_blank"
+              >
+                <Image
+                  src="/apple-logo.svg"
+                  alt="apple logo"
+                  width={25}
+                  height={30}
+                />
+                Get on iPhone
+              </Link>
+
+              <Link
+                className={`${montserrat.className} mt-3 flex w-full items-center justify-center gap-6 rounded-xl border border-primary-grey bg-white py-3.5 font-semibold uppercase leading-[1.4] tracking-[-0.02em]`}
+                href="/"
+                target="_blank"
+              >
+                <Image
+                  src="/google-logo.svg"
+                  alt="Playstore Logo"
+                  width={25}
+                  height={30}
+                />
+                Get on Android
+              </Link>
             </div>
           </div>
 

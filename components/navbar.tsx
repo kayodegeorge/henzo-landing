@@ -66,7 +66,7 @@ export default function Navbar() {
 
                 <Link
                   className="text-xl font-semibold leading-[1.2] tracking-[-0.04em] hover:text-[#44B242] hover:underline md:text-4xl"
-                  href="/"
+                  href="https://wa.me/2347065854554"
                 >
                   Chat with us
                 </Link>
@@ -79,7 +79,7 @@ export default function Navbar() {
 
                 <Link
                   className="text-xl font-semibold leading-[1.2] tracking-[-0.04em] hover:text-[#44B242] hover:underline md:text-4xl"
-                  href="/"
+                  href="https://wa.me/2347065854554"
                 >
                   Call us
                 </Link>
